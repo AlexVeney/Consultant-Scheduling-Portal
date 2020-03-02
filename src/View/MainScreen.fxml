@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" centerShape="false" prefHeight="554.0" prefWidth="1172.0" style="-fx-background-color: #014040;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+   <children>
+      <Label layoutX="43.0" layoutY="27.0" prefHeight="29.0" prefWidth="285.0" text="Scheduling System">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <VBox layoutX="43.0" layoutY="86.0" prefHeight="341.0" prefWidth="543.0" style="-fx-border-color: black;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="521.0" spacing="30.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="190.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Customers">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="362.0" spacing="10.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <TableView fx:id="customerTableView" prefHeight="218.0" prefWidth="521.0">
+              <columns>
+                <TableColumn fx:id="customerNameColumn" prefWidth="175.0" text="Name" />
+                <TableColumn fx:id="customerAddressColumn" prefWidth="203.0" text="Address" />
+                  <TableColumn fx:id="customerPhoneColumn" prefWidth="142.0" text="Phone Number" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="521.0" spacing="25.0">
+               <children>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#onActionAddCustomerScreen" prefWidth="60.0" text="Add" />
+                  <Button fx:id="modifyButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionModifyCustomerScreen" text="Modify" />
+                  <Button fx:id="deleteButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionDeleteSelectedCustomer" prefWidth="60.0" text="Delete" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="598.0" layoutY="86.0" prefHeight="341.0" prefWidth="543.0" style="-fx-border-color: black;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="79.0" prefWidth="521.0" spacing="30.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="190.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Appointments">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="362.0" spacing="10.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <TableView fx:id="appointmentTableView" prefHeight="252.0" prefWidth="521.0">
+               <columns>
+                  <TableColumn fx:id="appointmentDateColumn" prefWidth="200.0" text="Date" />
+                  <TableColumn fx:id="appointmentTypeColumn" prefWidth="122.0" text="Type" />
+                  <TableColumn fx:id="appointmentCustomerNameColumn" prefWidth="198.0" text="Customer Name" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="105.0" prefWidth="521.0" spacing="25.0">
+               <children>
+                  <Button fx:id="appointmentAddButton" mnemonicParsing="false" onAction="#onActionAddAppointmentScreen" prefWidth="60.0" text="Add" />
+                  <Button fx:id="appointmentModifyButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionModifyAppointmentScreen" text="Modify" />
+                  <Button fx:id="appointmentDeleteButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionDeleteSelectedAppointment" prefWidth="60.0" text="Delete" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="exitButton" layoutX="999.0" layoutY="457.0" mnemonicParsing="false" onAction="#onActionExitApplication" prefHeight="36.0" prefWidth="118.0" text="Exit" />
+      <ButtonBar layoutX="26.0" layoutY="455.0" prefHeight="40.0" prefWidth="268.0">
+        <buttons>
+            <Button fx:id="calendarButton" mnemonicParsing="false" onAction="#onActionCalendarPage" prefHeight="36.0" prefWidth="118.0" text="Calendar" />
+            <Button fx:id="reportsButton" mnemonicParsing="false" onAction="#onActionReportsScreen" prefHeight="36.0" prefWidth="118.0" text="Reports" />
+        </buttons>
+      </ButtonBar>
+   </children>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</AnchorPane>

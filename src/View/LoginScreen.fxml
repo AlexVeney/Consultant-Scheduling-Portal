@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="266.0" prefWidth="409.0" style="-fx-background-color: #143F59;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginScreenController">
+    <children>
+        <Button fx:id="submitButton" layoutX="259.0" layoutY="203.0" onAction="#signInOnAction" style="-fx-background-color: #657D8C;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
+         </font></Button>
+      <TextField fx:id="usernameTextField" layoutX="146.0" layoutY="93.0" style="-fx-background-color: #657D8C;">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></TextField>
+      <PasswordField fx:id="passwordTextField" layoutX="146.0" layoutY="137.0" style="-fx-background-color: #657D8C;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></PasswordField>
+      <Label fx:id="usernameLabel" layoutX="55.0" layoutY="98.0" text="Username:" textFill="WHITE">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
+         </font></Label>
+      <Label fx:id="passwordLabel" layoutX="56.0" layoutY="142.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
+         </font></Label>
+      <Label fx:id="appLabel" layoutX="51.0" layoutY="24.0" prefHeight="43.0" prefWidth="307.0" text="Scheduling System" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Apple SD Gothic Neo SemiBold" size="30.0" />
+         </font>
+      </Label>
+    </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

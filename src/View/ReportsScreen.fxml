@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsScreenController">
+   <children>
+      <VBox layoutX="14.0" layoutY="75.0" prefHeight="362.0" prefWidth="755.0" style="-fx-border-color: black;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="79.0" prefWidth="521.0" spacing="30.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label prefHeight="29.0" prefWidth="285.0" text="Reports">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="739.0" spacing="10.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <children>
+                        <RadioButton fx:id="apptCountRB" mnemonicParsing="false" onAction="#onActionApptCount" text="Report #1">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="repToggleGroup" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="userScheduleRB" mnemonicParsing="false" onAction="#onActionUserSchedule" text="Report #2" toggleGroup="$repToggleGroup" />
+                        <RadioButton fx:id="cityEngagementRB" layoutX="185.0" layoutY="24.0" mnemonicParsing="false" onAction="#onActionCityEngagement" text="Report #3" toggleGroup="$repToggleGroup" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <TextArea fx:id="reportText" editable="false" prefHeight="230.0" prefWidth="750.0" promptText="Select Report" wrapText="true" />
+            <Text fx:id="reportDescription" layoutX="21.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="727.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="backButton" layoutX="628.0" layoutY="457.0" mnemonicParsing="false" onAction="#onActionChangeToMainScreen" prefHeight="29.0" prefWidth="128.0" text="Back" />
+   </children>
+</AnchorPane>
